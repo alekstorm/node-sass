@@ -235,7 +235,7 @@ function watch(options, emitter) {
 
 function run(options, emitter) {
   if (!Array.isArray(options.includePath)) {
-    options.includePath = [options.includePath];
+    options.includePath = options.includePath.split(':');
   }
 
   if (options.directory) {
